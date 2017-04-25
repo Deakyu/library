@@ -1,3 +1,4 @@
+<?php include "session-start.php" ?>
 <?php include "db.php" ?>
 <?php
 $db = new DB();
