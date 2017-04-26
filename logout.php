@@ -2,7 +2,7 @@
 <?php
     if($_SESSION['login-status']) {
         $_SESSION['login-status'] = false;
-        unset($_SESSION['user_id']);
+        $_SESSION['user'] = false;
         header('Location: login.php');
     }
 ?>

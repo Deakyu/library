@@ -4,10 +4,8 @@
 
     $db = new DB();
 
-    if($db->authenticate('user1', 'pw1')) {
-        echo "success";
-    } else {
-        echo "fail";
-    }
+    $user = $db->getUserById($_SESSION['user_id']);
+
+    echo $user['username'];
 
 ?>
