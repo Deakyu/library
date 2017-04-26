@@ -179,6 +179,20 @@ class DB
         return false;
     }
 
+    public function getLibraryByName($name) {
+        $sql = $this->conn->prepare("
+            SELECT * FROM libraries WHERE `name` LIKE ?
+        ");
+        $sql->bind_param("s", $name);
+        $sql->execute();
+        $result = $sql->get_result();
+        $libraries = [];
+        while($row = $result->fetch_assoc()) {
+            $libraries[] = $row;
+        }
+        return $libraries;
+    }
+
     ///////////////////////////////////////////
     //       Books functions //////////////////
     ///////////////////////////////////////////
@@ -240,9 +254,31 @@ class DB
         return false;
     }
 
+    public function getBookByTitle($title) {
+        $sql = $this->conn->prepare("
+            SELECT * FROM books WHERE title LIKE ?
+        ");
+        $sql->bind_param("s", $title);
+        $sql->execute();
+        $result = $sql->get_result();
+        $books = [];
+        while($row = $result->fetch_assoc()) {
+            $books[] = $row;
+        }
+        return $books;
+    }
+
+    public function rentBook($bookId, $userId) {
+        $sql = $this->conn->prepare("
+            UPDATE books SET user_id=? WHERE book_id = ?
+        ");
+        $sql->bind_param("ii", $userId, $bookId);
+        $sql->execute();
+    }
+
     // TESTED
     public function updateRentStatusByBookId($bookId) {
-        $available = 999999999;
+        $available = -1;
         $sql = $this->conn->prepare("
             UPDATE books SET user_id=? WHERE book_id = ?
         ");

@@ -13,7 +13,7 @@
     </label>
 
     <input type="hidden" value="1" name="author_id">
-    <input type="hidden" value="1" name="user_id">
+    <input type="hidden" value="<?php echo available ?>" name="user_id">
     <input type="hidden" value="1" name="library_id">
     <button type="submit">submit</button>
 </form>

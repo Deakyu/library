@@ -4,8 +4,6 @@
 
     $db = new DB();
 
-    $user = $db->getUserById($_SESSION['user_id']);
-
-    echo $user['username'];
+    echo $_SESSION['user']['username'];
 
 ?>
