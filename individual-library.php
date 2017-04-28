@@ -17,10 +17,9 @@
     <ul class="lib-list">
         <?php
             foreach($booksInTheLibrary as $book) {
-                $author = $db->getAuthorById($book['author_id']);
                 echo "<li>" . $book['title'] . "</li>";
                 echo "<li>" . $book['date_of_publish'] . "</li>";
-                echo "<li>" . $author['first_name'] . " " . $author['last_name'] . "</li>";
+                echo "<li>" . $book['author'] . "</li>";
                 if($book['user_id'] == available) {
                     echo "<li><a href='rent.php?book_id=" . $book['book_id'] . "'><button>Rent</button></a></li>";
                 } else {

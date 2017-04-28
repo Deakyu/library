@@ -256,7 +256,7 @@ class DB
         ");
         $sql->bind_param("i", $id);
         $sql->execute();
-        $sql->bind_result($bookId, $title, $dateOfPublish, $libraryId, $authorId, $userId);
+        $sql->bind_result($bookId, $title, $dateOfPublish, $libraryId, $author, $userId);
         $sql->fetch();
         if($bookId) {
             $book = [];
@@ -264,7 +264,7 @@ class DB
             $book['title'] = $title;
             $book['date_of_publish'] = $dateOfPublish;
             $book['library_id'] = $libraryId;
-            $book['author_id'] = $authorId;
+            $book['author'] = $author;
             $book['user_id'] = $userId;
             return $book;
         }
@@ -366,58 +366,6 @@ class DB
             $books[] = $row;
         }
         return $books;
-    }
-
-    ///////////////////////////////////////////
-    //         Authors functions             //
-    ///////////////////////////////////////////
-    // TESTED
-    public function createAuthor($firstName, $lastName) {
-        $sql = $this->conn->prepare("
-            INSERT INTO authors (first_name, last_name) VALUES (?, ?)
-        ");
-        $sql->bind_param("ss", $firstName, $lastName);
-        $sql->execute();
-    }
-
-    public function deleteAuthorById($id) {
-        $sql = $this->conn->prepare("
-            DELETE FROM authors WHERE author_id = ?
-        ");
-        $sql->bind_param("i", $id);
-        $sql->execute();
-        $db = new DB();
-        $db->deleteBookByAuthorId($id);
-    }
-
-    // TESTED
-    public function getAllAuthors() {
-        $sql = $this->conn->query("
-            SELECT * FROM authors
-        ");
-        $authors = [];
-        while($row = $sql->fetch_assoc()) {
-            $authors[] = $row;
-        }
-        return $authors;
-    }
-
-    public function getAuthorById($id) {
-        $sql = $this->conn->prepare("
-            SELECT * FROM authors WHERE author_id = ?
-        ");
-        $sql->bind_param("i", $id);
-        $sql->execute();
-        $sql->bind_result($authorId, $firstName, $lastName);
-        $sql->fetch();
-        if($authorId) {
-            $author = [];
-            $author['author_id'] = $authorId;
-            $author['first_name'] = $firstName;
-            $author['last_name'] = $lastName;
-            return $author;
-        }
-        return false;
     }
 
 
