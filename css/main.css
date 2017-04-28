@@ -5,6 +5,15 @@ html, body {
     margin:0;
 }
 
+body {
+    font-family: "Lucida Console", monospace;
+
+    background-image: url('backG.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 .container {
     width: 80%;
     margin: 5% auto;
@@ -12,16 +21,10 @@ html, body {
     background: rgba(0, 0, 0, 0.1);
 }
 
-.pull-left {
-    float:left;
-}
-
-.pull-right {
-    float:right;
-}
-
 .lib-list {
+    list-style: none;
     width: 100%;
+    overflow-y: auto;
 }
 
 .lib-list td {
@@ -46,11 +49,9 @@ html, body {
 
 #navbar li {
     margin-top: 0;
-    /*background: red;*/
-    
     width:20%;
     height:100%;
-    line-height: 64px;
+    line-height: 73.44px;
     list-style: none;
     float: left;
     font-size: 1.6rem;
@@ -76,4 +77,73 @@ html, body {
 
 #navbar li a:visited {
     color: white;
+}
+
+form {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.login-form {
+    width: 30%;
+    margin: 7% auto 0 auto;
+    padding: 2%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+
+    color: white;
+}
+
+.login-form button {
+    margin-top: 2%;
+    margin-bottom: 0;
+
+    width: 15%;
+    height:25px;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.login-form button:focus {
+    outline:0;
+}
+
+.login-form button:hover {
+    border-radius: 15px;
+    -webkit-transition: linear 0.2s;
+    -moz-transition: linear 0.2s;
+    -ms-transition: linear 0.2s;
+    -o-transition: linear 0.2s;
+    transition: linear 0.2s;
+}
+
+.login-form input {
+    font-size: 15px;
+    border:none;
+    border-radius: 5px;
+    padding:3px;
+}
+
+.login-form input:focus{
+    outline:0;
+}
+
+.form-group {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#user-result {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.rented {
+    color: white;
+    text-decoration: underline;
 }

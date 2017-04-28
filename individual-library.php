@@ -24,13 +24,19 @@
                 if($book['user_id'] == available) {
                     echo "<li><a href='rent.php?book_id=" . $book['book_id'] . "'><button>Rent</button></a></li>";
                 } else {
-                    echo "<li><a href='return-book.php?book_id=" . $book['book_id'] . "'><button>Return</button></a></li>";
+                    if($book['user_id'] == $_SESSION['user']['user_id']) {
+                        echo "<li><a href='return-book.php?book_id=" . $book['book_id'] . "'><button>Return</button></a></li>";
+                    } else {
+                        echo "<li class='rented'>Rented</li>";
+                    }
                 }
                 echo "<hr><br>";
             }
         ?>
     </ul>
 </div>
+
+<a href="/all-libraries.php"><button>See All Libraries</button></a>
 
 
 <?php include "includes/footer.php" ?>

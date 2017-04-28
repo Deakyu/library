@@ -33,6 +33,23 @@ class DB
         $sql->execute();
     }
 
+    public function checkUsername($username) {
+        $user = filter_var($username, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW|FILTER_FLAG_STRIP_HIGH);
+
+        $sql = $this->conn->prepare("
+            SELECT username FROM users WHERE username = ?
+        ");
+        $sql->bind_param("s", $user);
+        $sql->execute();
+        $sql->bind_result($user);
+        if($sql->fetch()) {
+            return "not available";
+        } else {
+            return "available";
+        }
+
+    }
+
     // TESTED
     public function deleteUserById($userId) {
         $sql = $this->conn->prepare("
