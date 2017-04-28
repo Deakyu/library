@@ -1,4 +1,5 @@
 <?php include "session-start.php" ?>
+<?php include "login-middleware.php" ?>
 <?php include "db.php";
     if(isset($_GET['book_id'])) {
         $db = new DB();

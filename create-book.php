@@ -1,4 +1,5 @@
 <?php include "session-start.php" ?>
+<?php include "login-middleware.php" ?>
 <?php include "includes/header.php"; ?>
 
 <form action="store-book.php" method="post">
