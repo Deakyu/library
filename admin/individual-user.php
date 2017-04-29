@@ -29,6 +29,10 @@ if(isset($_GET['user_id'])) {
             <td>Admin?</td>
             <td><?php if($user) echo $user['is_admin'] == 1 ? 'Administrator' : 'Visitor' ?></td>
         </tr>
+        <tr>
+            <td><a href="/admin/user-edit.php?user_id=<?php echo $user['user_id'] ?>"><button>Edit</button></a></td>
+            <td><a href="/admin/user-delete.php?user_id=<?php echo $user['user_id'] ?>"><button>Delete</button></a></td>
+        </tr>
     </table>
 </div>
 

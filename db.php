@@ -141,6 +141,16 @@ class DB
     }
 
 
+    public function updateUser($userId, $username, $pw, $isAdmin) {
+        $sql = $this->conn->prepare("
+            UPDATE users SET username=?, pw=?, is_admin=? WHERE user_id = ?
+        ");
+        $hash = password_hash($pw, PASSWORD_BCRYPT, ['cost'=>11]);
+        $sql->bind_param("ssii", $username, $hash, $isAdmin, $userId);
+        $sql->execute();
+    }
+
+
 
     ///////////////////////////////////////////
     //        Libraries function //////////////
