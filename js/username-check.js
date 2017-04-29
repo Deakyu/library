@@ -4,6 +4,8 @@ $(document).ready(function() {
     usernameField.blur(function() {
         if(!$(this).val()) {
             $("#user-result").css("display", "none");
+        } else {
+            $("#user-result").css("display", "block");
         }
     });
 

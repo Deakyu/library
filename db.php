@@ -33,6 +33,15 @@ class DB
         $sql->execute();
     }
 
+    public function createUserWithAdmin($username, $pw, $isAdmin) {
+        $sql = $this->conn->prepare("
+            INSERT INTO users (username, pw, is_admin) VALUES (?, ?, ?)
+        ");
+        $hash = password_hash($pw, PASSWORD_BCRYPT, ['cost'=>11]);
+        $sql->bind_param("ssi", $username, $hash, $isAdmin);
+        $sql->execute();
+    }
+
     public function checkUsername($username) {
         $user = filter_var($username, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW|FILTER_FLAG_STRIP_HIGH);
 
@@ -128,18 +137,6 @@ class DB
         $sql->fetch();
         return $userId;
     }
-
-    public function getUsernameById($id) {
-        $sql = $this->conn->prepare("
-            SELECT username FROM users WHERE user_id = ?
-        ");
-        $sql->bind_param("i", $id);
-        $sql->execute();
-        $sql->bind_result($username);
-        $sql->fetch();
-        return $username;
-    }
-
 
     public function updateUser($userId, $username, $pw, $isAdmin) {
         $sql = $this->conn->prepare("

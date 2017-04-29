@@ -16,6 +16,7 @@
             }
         ?>
     </ul>
+    <a href="user-create.php"><button>Create User</button></a>
 </div>
 
 <?php include "../includes/footer.php" ?>
