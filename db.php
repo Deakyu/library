@@ -161,6 +161,14 @@ class DB
         $sql->execute();
     }
 
+    public function updateLibrary($libraryId, $name, $street, $city, $state, $zip) {
+        $sql = $this->conn->prepare("
+            UPDATE libraries SET `name`=?, add_street=?, add_city=?, add_state=?, add_zip=? WHERE library_id=?
+        ");
+        $sql->bind_param("sssssi", $name, $street, $city, $state, $zip, $libraryId);
+        $sql->execute();
+    }
+
     public function deleteLibraryById($id) {
         $sql = $this->conn->prepare("
             DELETE FROM libraries WHERE library_id = ?
