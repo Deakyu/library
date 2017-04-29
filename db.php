@@ -230,20 +230,27 @@ class DB
     //       Books functions //////////////////
     ///////////////////////////////////////////
     // TESTED
-    public function createBook($title, $date, $libraryId, $authorId, $userId) {
+    public function createBook($title, $date, $libraryId, $author, $userId) {
         $sql = $this->conn->prepare("
-            INSERT INTO books (title, date_of_publish, library_id, author_id, user_id) VALUES (?, ?, ?, ?, ?)
+            INSERT INTO books (title, date_of_publish, library_id, author, user_id) VALUES (?, ?, ?, ?, ?)
         ");
-        $sql->bind_param("ssiii", $title, $date, $libraryId, $authorId, $userId);
+        $sql->bind_param("ssisi", $title, $date, $libraryId, $author, $userId);
         $sql->execute();
     }
 
-    public function deleteBookByAuthorId($authorId)
-    {
+    public function updateBook($bookId, $title, $dateOfPublish, $author, $libraryId, $userId) {
         $sql = $this->conn->prepare("
-            DELETE FROM books WHERE author_id = ?
+            UPDATE books SET title=?, date_of_publish=?, author=?, library_id=?, user_id=? WHERE book_id=?
         ");
-        $sql->bind_param("i", $authorId);
+        $sql->bind_param("sssiii", $title, $dateOfPublish, $author, $libraryId, $userId, $bookId);
+        $sql->execute();
+    }
+
+    public function deleteBookById($bookId) {
+        $sql = $this->conn->prepare("
+            DELETE FROM books WHERE book_id = ?
+        ");
+        $sql->bind_param("i", $bookId);
         $sql->execute();
     }
 
@@ -272,7 +279,7 @@ class DB
         ");
         $sql->bind_param("i", $id);
         $sql->execute();
-        $sql->bind_result($bookId, $title, $dateOfPublish, $libraryId, $author, $userId);
+        $sql->bind_result($bookId, $title, $dateOfPublish, $libraryId, $userId, $author);
         $sql->fetch();
         if($bookId) {
             $book = [];
@@ -318,49 +325,11 @@ class DB
         $sql->bind_param("ii", $available, $bookId);
         $sql->execute();
     }
-
-    public function whoRentIt($bookId) {
-        $sql = $this->conn->prepare("
-            SELECT user_id FROM books WHERE book_id = ?
-        ");
-        $sql->bind_param("i", $bookId);
-        $sql->execute();
-        $sql->bind_result($userId);
-        $sql->fetch();
-        return $userId;
-    }
-
-    public function whoWroteIt($bookId) {
-        $sql = $this->conn->prepare("
-            SELECT author_id FROM books WHERE book_id = ?
-        ");
-        $sql->bind_param("i", $bookId);
-        $sql->execute();
-        $sql->bind_result($authorId);
-        $sql->fetch();
-        return $authorId;
-    }
-
     // TESTED
     public function getAllBooksByUserId($id) {
         $sql = $this->conn->prepare("
             SELECT * FROM books WHERE user_id = ?");
         $sql->bind_param("i", $id);
-        $sql->execute();
-        $result = $sql->get_result();
-        $books = [];
-        while($row = $result->fetch_assoc()) {
-            $books[] = $row;
-        }
-        return $books;
-    }
-
-    // TESTED
-    public function getAllBooksByAuthorId($authorId) {
-        $sql = $this->conn->prepare("
-            SELECT * FROM books WHERE author_id = ?
-        ");
-        $sql->bind_param("i", $authorId);
         $sql->execute();
         $result = $sql->get_result();
         $books = [];
