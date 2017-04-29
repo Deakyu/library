@@ -147,3 +147,10 @@ form {
     color: white;
     text-decoration: underline;
 }
+
+.user-list-table {
+    width:80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right:auto;
+}

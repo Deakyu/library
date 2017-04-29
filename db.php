@@ -110,6 +110,7 @@ class DB
             $user = [];
             $user['user_id'] = $userId;
             $user['username'] = $username;
+            $user['pw'] = $pw;
             $user['is_admin'] = $isAdmin;
             return $user;
         }

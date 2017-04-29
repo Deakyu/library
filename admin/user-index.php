@@ -7,13 +7,16 @@
     $users = $db->getAllUsers();
 ?>
 
-<ul>
-    <?php
-        foreach($users as $user) {
-            echo "<li>" . $user['username'] . "</li>";
-        }
-    ?>
-</ul>
+<div class="container">
+
+    <ul>
+        <?php
+            foreach($users as $user) {
+                echo "<li><a href='individual-user.php?user_id=" . $user['user_id'] . "'>" . $user['username'] . "</a>";
+            }
+        ?>
+    </ul>
+</div>
 
 <?php include "../includes/footer.php" ?>
 
