@@ -3,6 +3,7 @@
 <?php include "../includes/header.php" ?>
 <?php include "admin-sidebar.php" ?>
 <?php include "../db.php" ?>
+<?php $db = new DB(); ?>
 
 <div class="content">
     <div class="container">
@@ -24,13 +25,27 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="library_id" class="form-control">Library Id</label>
-                    <input type="text" class="form-control" name="library_id">
+                    <label for="library_id" class="form-control">Library</label>
+                    <select name="library_id" id="library_id" class="form-control">
+                        <?php
+                        $libraries = $db->getAllLibraries();
+                        foreach($libraries as $library) {
+                            echo "<option value=" . $library['library_id'] . ">" . $library['name'] . "</option>";
+                        }
+                        ?>
+                    </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="user_id" class="form-control">User Id</label>
-                    <input type="text" class="form-control" name="user_id">
+                    <label for="user_id" class="form-control">User</label>
+                    <select name="user_id" id="user_id" class="form-control">
+                        <?php
+                        $users = $db->getAllUsers();
+                        foreach($users as $user) {
+                            echo "<option value=" . $user['user_id'] . ">" . $user['username'] . "</option>";
+                        }
+                        ?>
+                    </select>
                 </div>
 
                 <button type="submit" class="store-button">Create</button>
