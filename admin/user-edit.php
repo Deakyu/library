@@ -38,7 +38,7 @@ if(isset($_GET['user_id'])) {
 
                 <input name="user_id" type="hidden" value="<?php echo $user['user_id'] ?>">
 
-                <button type="submit">Update</button>
+                <button type="submit" class="update-button">Update</button>
             </form>
         </div>
     </div>

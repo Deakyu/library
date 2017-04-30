@@ -11,7 +11,7 @@
 <div class="content">
 
     <div class="container">
-
+        <a href="user-create.php"><button>Create User</button></a>
         <ul>
             <?php
             foreach($users as $user) {
@@ -19,7 +19,6 @@
             }
             ?>
         </ul>
-        <a href="user-create.php"><button>Create User</button></a>
     </div>
 </div>
 

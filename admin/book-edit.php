@@ -45,7 +45,7 @@ if(isset($_GET['book_id'])) {
 
                 <input type="hidden" name="book_id" value="<?php echo $book ? $book['book_id'] : -1 ?>">
 
-                <button type="submit">Update</button>
+                <button type="submit" class="update-button">Update</button>
             </form>
         </div>
     </div>

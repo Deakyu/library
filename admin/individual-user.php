@@ -34,7 +34,7 @@ if(isset($_GET['user_id'])) {
             </tr>
             <tr>
                 <td><a href="/admin/user-edit.php?user_id=<?php echo $user['user_id'] ?>"><button>Edit</button></a></td>
-                <td><a href="/admin/user-delete.php?user_id=<?php echo $user['user_id'] ?>"><button>Delete</button></a></td>
+                <td><a href="/admin/user-delete.php?user_id=<?php echo $user['user_id'] ?>"><button class="delete-button">Delete</button></a></td>
             </tr>
         </table>
     </div>

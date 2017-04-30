@@ -46,7 +46,7 @@ if(isset($_GET['library_id'])) {
                 <input type="hidden" name="library_id" value="<?php echo $library ? $library['library_id'] : -1 ?>">
 
 
-                <button type="submit">Update</button>
+                <button type="submit" class="update-button">Update</button>
             </form>
         </div>
     </div>

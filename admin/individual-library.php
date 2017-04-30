@@ -30,7 +30,7 @@ if(isset($_GET['library_id'])) {
             </tr>
             <tr>
                 <td><a href="/admin/library-edit.php?library_id=<?php echo $library['library_id'] ?>"><button>Edit</button></a></td>
-                <td><a href="/admin/library-delete.php?library_id=<?php echo $library['library_id'] ?>"><button>Delete</button></a></td>
+                <td><a href="/admin/library-delete.php?library_id=<?php echo $library['library_id'] ?>"><button class="delete-button">Delete</button></a></td>
             </tr>
         </table>
     </div>

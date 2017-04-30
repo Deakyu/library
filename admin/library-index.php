@@ -10,7 +10,7 @@ $libraries = $db->getAllLibraries();
 
 <div class="content">
     <div class="container">
-
+        <a href="library-create.php"><button>Create Library</button></a>
         <ul>
             <?php
             foreach($libraries as $library) {
@@ -18,7 +18,6 @@ $libraries = $db->getAllLibraries();
             }
             ?>
         </ul>
-        <a href="library-create.php"><button>Create Library</button></a>
     </div>
 </div>
 

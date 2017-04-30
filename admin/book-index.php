@@ -11,7 +11,7 @@ $books = $db->getAllBooks();
 <div class="content">
 
     <div class="container">
-
+        <a href="book-create.php"><button>Create Book</button></a>
         <ul>
             <?php
             foreach($books as $book) {
@@ -19,7 +19,6 @@ $books = $db->getAllBooks();
             }
             ?>
         </ul>
-        <a href="book-create.php"><button>Create Book</button></a>
     </div>
 </div>
 

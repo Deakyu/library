@@ -33,7 +33,7 @@
                     <input type="text" class="form-control" name="user_id">
                 </div>
 
-                <button type="submit">Create</button>
+                <button type="submit" class="store-button">Create</button>
             </form>
         </div>
     </div>

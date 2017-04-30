@@ -46,7 +46,7 @@ if(isset($_GET['book_id'])) {
             </tr>
             <tr>
                 <td><a href="/admin/book-edit.php?book_id=<?php echo $book['book_id'] ?>"><button>Edit</button></a></td>
-                <td><a href="/admin/book-delete.php?book_id=<?php echo $book['book_id'] ?>"><button>Delete</button></a></td>
+                <td><a href="/admin/book-delete.php?book_id=<?php echo $book['book_id'] ?>"><button class="delete-button">Delete</button></a></td>
             </tr>
         </table>
     </div>

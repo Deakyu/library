@@ -33,7 +33,7 @@
                 </div>
 
 
-                <button type="submit">Create Library</button>
+                <button type="submit" class="store-button">Create Library</button>
             </form>
         </div>
     </div>

@@ -32,7 +32,7 @@ $db = new DB();
                     </select>
                 </div>
 
-                <button type="submit">Create</button>
+                <button type="submit" class="store-button">Create</button>
             </form>
         </div>
     </div>
