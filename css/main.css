@@ -15,21 +15,86 @@ body {
 }
 
 .container {
-    width: 80%;
-    margin: 5% auto;
-    padding: 2%;
-    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height:100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 1.4rem;
 }
 
-.lib-list {
+.container ul {
     list-style: none;
-    width: 100%;
+    width:100%;
+    margin:0;
+    padding: 0;
     overflow-y: auto;
 }
 
-.lib-list td {
-    width:33%;
-    text-align: center;
+.container ul li {
+    width:100%;
+    height:50px;
+    line-height: 50px;
+    padding:0;
+    font-size: 1.2em;
+}
+
+.container ul li:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.container ul li a {
+    display: block;
+    width:100%;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.container ul li a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+/* tables */
+
+.container table {
+    width:100%;
+    height:100%;
+    border:0;
+    font-size: 2rem;
+}
+
+.container table td {
+    width:50%;
+    background: white;
+    padding:5px;
+}
+
+.container table tr {
+    width:100%;
+    background: white;
+    padding:5px;
+}
+
+.container table tr td a {
+    display: block;
+    width:100%;
+    height:100%;
+    color: black;
+    text-decoration: none;
+}
+
+.container table tr td a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.container table tr td a button{
+    display: block;
+    width:100%;
+    height:100%;
+    font-size: 3rem;
 }
 
 #navbar {
@@ -127,13 +192,22 @@ form {
     padding:3px;
 }
 
-.login-form input:focus{
+input:focus{
     outline:0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
 }
 
 .form-group {
     display: block;
     margin-bottom: 10px;
+    width:100%;
+    padding:0;
+}
+
+.form-control {
+    display: inline-block;
+    width:50%;
 }
 
 #user-result {
@@ -146,11 +220,4 @@ form {
 .rented {
     color: white;
     text-decoration: underline;
-}
-
-.user-list-table {
-    width:80%;
-    text-align: center;
-    margin-left: auto;
-    margin-right:auto;
 }

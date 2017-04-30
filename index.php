@@ -4,7 +4,8 @@
 <?php include "includes/header.php"; ?>
 
 <div class="container">
-    <h1 style="text-align: center;">welcome</h1>
+    <h1>welcome</h1>
+    <a href="all-libraries.php"><button>Go To Libraries</button></a>
 </div>
 
 <?php include "includes/footer.php"; ?>

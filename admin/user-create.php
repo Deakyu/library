@@ -1,36 +1,40 @@
 <?php include "../session-start.php" ?>
 <?php include "admin-middleware.php" ?>
 <?php include "../includes/header.php" ?>
+<?php include "admin-sidebar.php" ?>
 <?php include "../db.php" ?>
 <?php
 $db = new DB();
 
 ?>
 
-<div class="container">
-    <div class="login-form">
-        <form action="user-store.php" method="post">
-            <div class="form-group">
-                <label for="username" class="form-control" id="username">Username:</label>
-                <input type="text" name="username" class="form-control" autocomplete="off" id="username-admin">
-                <div id="user-result-admin"></div>
-            </div>
+<div class="content">
 
-            <div class="form-group">
-                <label for="pw" class="form-control">Password:</label>
-                <input type="password" name="pw" class="form-control">
-            </div>
+    <div class="container">
+        <div class="login-form">
+            <form action="user-store.php" method="post">
+                <div class="form-group">
+                    <label for="username" class="form-control" id="username">Username:</label>
+                    <input type="text" name="username" class="form-control" autocomplete="off" id="username-admin">
+                    <div id="user-result-admin"></div>
+                </div>
 
-            <div class="form-group">
-                <label for="is_admin" class="form-control">Admin?</label>
-                <select name="is_admin" id="is_admin" class="form-control">
-                    <option value="1">Administrator</option>
-                    <option value="0">Visitor</option>
-                </select>
-            </div>
+                <div class="form-group">
+                    <label for="pw" class="form-control">Password:</label>
+                    <input type="password" name="pw" class="form-control">
+                </div>
 
-            <button type="submit">Create</button>
-        </form>
+                <div class="form-group">
+                    <label for="is_admin" class="form-control">Admin?</label>
+                    <select name="is_admin" id="is_admin" class="form-control">
+                        <option value="1">Administrator</option>
+                        <option value="0">Visitor</option>
+                    </select>
+                </div>
+
+                <button type="submit">Create</button>
+            </form>
+        </div>
     </div>
 </div>
 <script

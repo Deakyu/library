@@ -5,6 +5,7 @@
 <head>
   <meta charset="utf-8">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
   <title>Library</title>
 </head>
 
