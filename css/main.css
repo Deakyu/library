@@ -227,6 +227,15 @@ form {
     padding:3px;
 }
 
+select{
+    text-align-last:center;
+    direction: inherit;
+}
+
+input {
+    text-align: center;
+}
+
 input:focus{
     outline:0;
     background: rgba(0, 0, 0, 0.5);

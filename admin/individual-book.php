@@ -37,11 +37,11 @@ if(isset($_GET['book_id'])) {
                 <td><?php echo $book ? $book['author'] : "No Book found" ?></td>
             </tr>
             <tr>
-                <td>Library Owning the Book</td>
+                <td>Placed In</td>
                 <td><?php echo $libraryOfTheBook ? $libraryOfTheBook['name'] : 'No Library found' ?></td>
             </tr>
             <tr>
-                <td>User Who Rent The Book</td>
+                <td>Rented By</td>
                 <td><?php echo $userOfTheBook ? $userOfTheBook['username'] : 'No User Found' ?></td>
             </tr>
             <tr>

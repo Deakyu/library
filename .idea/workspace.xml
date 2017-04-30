@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3d675bd-b764-4db1-a496-77ec40ffe2b8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/book-create.php" afterPath="$PROJECT_DIR$/admin/book-create.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/book-edit.php" afterPath="$PROJECT_DIR$/admin/book-edit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/book-index.php" afterPath="$PROJECT_DIR$/admin/book-index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/individual-book.php" afterPath="$PROJECT_DIR$/admin/individual-book.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/individual-library.php" afterPath="$PROJECT_DIR$/admin/individual-library.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/individual-user.php" afterPath="$PROJECT_DIR$/admin/individual-user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/library-create.php" afterPath="$PROJECT_DIR$/admin/library-create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/library-edit.php" afterPath="$PROJECT_DIR$/admin/library-edit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/library-index.php" afterPath="$PROJECT_DIR$/admin/library-index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/user-create.php" afterPath="$PROJECT_DIR$/admin/user-create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/user-edit.php" afterPath="$PROJECT_DIR$/admin/user-edit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/user-index.php" afterPath="$PROJECT_DIR$/admin/user-index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,22 +74,24 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+          <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="149">
-                  <caret line="211" column="1" lean-forward="true" selection-start-line="211" selection-start-column="1" selection-end-line="211" selection-end-column="1" />
+                <state relative-caret-position="387">
+                  <caret line="231" column="0" lean-forward="false" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="book-edit.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="book-edit.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/admin/book-edit.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="416">
-                  <caret line="42" column="40" lean-forward="false" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
-                  <folding />
+                <state relative-caret-position="378">
+                  <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+                  <folding>
+                    <marker date="1493517925623" expanded="true" signature="1822:1930" ph="..." />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -219,15 +210,15 @@
         <option value="$PROJECT_DIR$/admin/user-index.php" />
         <option value="$PROJECT_DIR$/admin/library-index.php" />
         <option value="$PROJECT_DIR$/admin/book-index.php" />
-        <option value="$PROJECT_DIR$/admin/individual-book.php" />
         <option value="$PROJECT_DIR$/admin/individual-library.php" />
         <option value="$PROJECT_DIR$/admin/individual-user.php" />
-        <option value="$PROJECT_DIR$/admin/book-edit.php" />
         <option value="$PROJECT_DIR$/admin/library-edit.php" />
         <option value="$PROJECT_DIR$/admin/user-edit.php" />
         <option value="$PROJECT_DIR$/admin/book-create.php" />
         <option value="$PROJECT_DIR$/admin/library-create.php" />
         <option value="$PROJECT_DIR$/admin/user-create.php" />
+        <option value="$PROJECT_DIR$/admin/individual-book.php" />
+        <option value="$PROJECT_DIR$/admin/book-edit.php" />
         <option value="$PROJECT_DIR$/css/main.css" />
       </list>
     </option>
@@ -429,12 +420,12 @@
       <workItem from="1493423115529" duration="1169000" />
       <workItem from="1493426050171" duration="5792000" />
       <workItem from="1493442086195" duration="3339000" />
-      <workItem from="1493507156038" duration="7241000" />
+      <workItem from="1493507156038" duration="8007000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61279000" />
+    <option name="totallyTimeSpent" value="62045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1552" height="840" extended-state="6" />
@@ -775,14 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/individual-book.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="48" column="120" lean-forward="false" selection-start-line="48" selection-start-column="120" selection-end-line="48" selection-end-column="120" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/individual-library.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -839,14 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="211" column="1" lean-forward="true" selection-start-line="211" selection-start-column="1" selection-end-line="211" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="668">
@@ -888,10 +863,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admin/individual-book.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="39" column="29" lean-forward="false" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admin/book-edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="42" column="40" lean-forward="false" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+        <state relative-caret-position="378">
+          <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+          <folding>
+            <marker date="1493517925623" expanded="true" signature="1822:1930" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="231" column="0" lean-forward="false" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
           <folding />
         </state>
       </provider>
