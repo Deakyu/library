@@ -39,7 +39,12 @@ if(isset($_GET['book_id'])) {
                         <?php
                             $libraries = $db->getAllLibraries();
                             foreach($libraries as $library) {
-                                echo "<option value=" . $library['library_id'] . ">" . $library['name'] . "</option>";
+//                                echo "<option value=" . $library['library_id'] . ">" . $library['name'] . "</option>";
+                                if($library['library_id'] == $book['library_id']) {
+                                    echo "<option value=" . $library['library_id'] . " selected>" . $library['name'] . "</option>";
+                                } else {
+                                    echo "<option value=" . $library['library_id'] . ">" . $library['name'] . "</option>";
+                                }
                             }
                         ?>
                     </select>
@@ -51,10 +56,16 @@ if(isset($_GET['book_id'])) {
                         <?php
                             $users = $db->getAllUsers();
                             foreach($users as $user) {
-                                echo "<option value=" . $user['user_id'] . ">" . $user['username'] . "</option>";
+//                                echo "<option value=" . $user['user_id'] . ">" . $user['username'] . "</option>";
+                                if($user['user_id'] == $book['user_id']) {
+                                    echo "<option value=" . $user['user_id'] . " selected>" . $user['username'] . "</option>";
+                                } else {
+                                    echo "<option value=" . $user['user_id'] . ">" . $user['username'] . "</option>";
+                                }
+
                             }
                         ?>
-                        <option value="-1">Available</option>
+                        <option value="-1" <?php echo $book['user_id'] == -1 ? "selected" : "" ?>>Available</option>
                     </select>
                 </div>
 

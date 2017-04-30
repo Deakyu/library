@@ -35,7 +35,6 @@
     </ul>
 </div>
 
-<a href="/all-libraries.php"><button>See All Libraries</button></a>
 
 
 <?php include "includes/footer.php" ?>
