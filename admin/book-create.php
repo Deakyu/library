@@ -45,6 +45,7 @@
                             echo "<option value=" . $user['user_id'] . ">" . $user['username'] . "</option>";
                         }
                         ?>
+                        <option value="-1">Available</option>
                     </select>
                 </div>
 
