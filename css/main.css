@@ -14,11 +14,13 @@ body {
     background-position: center center;
 }
 
+/* container */
 .container {
     width: 100%;
     height:100%;
     margin: 0;
     padding: 0;
+
     text-align: center;
     font-size: 1.4rem;
 }
@@ -26,8 +28,10 @@ body {
 .container button {
     width:100%;
     height: 50px;
+
     font-size: 25px;
     background: rgb(0, 230, 172);
+
     border:none;
     -webkit-box-shadow: inset 0 0 5px 5px rgb(0, 77, 77);
     -moz-box-shadow: inset 0 0 5px 5px rgb(0, 77, 77);
@@ -42,6 +46,7 @@ body {
 .login-form .update-button {
     width: 50%;
     height:10%;
+
     background: rgb(102, 140, 255);
     -webkit-box-shadow: inset 0 0 5px 5px rgb(0, 26, 102);
     -moz-box-shadow: inset 0 0 5px 5px rgb(0, 26, 102);
@@ -58,18 +63,19 @@ body {
 }
 
 .container ul {
-    list-style: none;
     width:100%;
     margin:0;
     padding: 0;
     overflow-y: auto;
+    list-style: none;
 }
 
 .container ul li {
     width:100%;
     height:50px;
-    line-height: 50px;
     padding:0;
+
+    line-height: 50px;
     font-size: 1.2em;
 }
 
@@ -78,8 +84,8 @@ body {
 }
 
 .container ul li a {
-    display: block;
     width:100%;
+    display: block;
     color: black;
     font-weight: bold;
     text-decoration: none;
@@ -91,7 +97,6 @@ body {
 }
 
 /* tables */
-
 .container table {
     width:100%;
     height:100%;

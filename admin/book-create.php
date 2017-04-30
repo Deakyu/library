@@ -16,7 +16,7 @@
 
                 <div class="form-group">
                     <label for="date_of_publish" class="form-control">Date Of Publish</label>
-                    <input type="date" class="form-control" name="date_of_publish">
+                    <input type="date" class="form-control" name="date_of_publish" value="<?php echo date("Y-m-j") ?>">
                 </div>
 
                 <div class="form-group">

@@ -23,7 +23,7 @@ class DB
     ///////////////////////////////////////////
     //         User functions    //////////////
     ///////////////////////////////////////////
-    // TESTED
+
     public function createUser($username, $pw) {
         $sql = $this->conn->prepare("
             INSERT INTO users (username, pw) VALUES (?, ?)
@@ -59,7 +59,7 @@ class DB
 
     }
 
-    // TESTED
+
     public function deleteUserById($userId) {
         $sql = $this->conn->prepare("
             DELETE FROM users WHERE user_id = ?
@@ -86,7 +86,7 @@ class DB
 
     }
 
-    // TESTED
+
     public function authenticate($username, $pw) {
         $sql = $this->conn->prepare("
             SELECT username, pw FROM users WHERE username = ?
@@ -126,7 +126,7 @@ class DB
         return false;
     }
 
-    // TESTED
+
     public function getUserId($username) {
         $sql = $this->conn->prepare("
             SELECT user_id FROM users WHERE username = ?
@@ -152,7 +152,7 @@ class DB
     ///////////////////////////////////////////
     //        Libraries function //////////////
     ///////////////////////////////////////////
-    // TESTED
+
     public function createLibrary($name, $street, $city, $state, $zip) {
         $sql = $this->conn->prepare("
             INSERT INTO libraries(`name`, add_street, add_city, add_state, add_zip) VALUES (?, ?, ?, ?, ?)
@@ -179,7 +179,7 @@ class DB
         $db->deleteBookByLibraryId($id);
     }
 
-    // TESTED
+
     public function getAllLibraries() {
         $sql = $this->conn->query("
             SELECT * FROM libraries
@@ -212,24 +212,10 @@ class DB
         return false;
     }
 
-    public function getLibraryByName($name) {
-        $sql = $this->conn->prepare("
-            SELECT * FROM libraries WHERE `name` LIKE ?
-        ");
-        $sql->bind_param("s", $name);
-        $sql->execute();
-        $result = $sql->get_result();
-        $libraries = [];
-        while($row = $result->fetch_assoc()) {
-            $libraries[] = $row;
-        }
-        return $libraries;
-    }
-
     ///////////////////////////////////////////
     //       Books functions //////////////////
     ///////////////////////////////////////////
-    // TESTED
+
     public function createBook($title, $date, $libraryId, $author, $userId) {
         $sql = $this->conn->prepare("
             INSERT INTO books (title, date_of_publish, library_id, author, user_id) VALUES (?, ?, ?, ?, ?)
@@ -294,20 +280,6 @@ class DB
         return false;
     }
 
-    public function getBookByTitle($title) {
-        $sql = $this->conn->prepare("
-            SELECT * FROM books WHERE title LIKE ?
-        ");
-        $sql->bind_param("s", $title);
-        $sql->execute();
-        $result = $sql->get_result();
-        $books = [];
-        while($row = $result->fetch_assoc()) {
-            $books[] = $row;
-        }
-        return $books;
-    }
-
     public function rentBook($bookId, $userId) {
         $sql = $this->conn->prepare("
             UPDATE books SET user_id=? WHERE book_id = ?
@@ -316,7 +288,7 @@ class DB
         $sql->execute();
     }
 
-    // TESTED
+
     public function updateRentStatusByBookId($bookId) {
         $available = -1;
         $sql = $this->conn->prepare("
@@ -325,7 +297,7 @@ class DB
         $sql->bind_param("ii", $available, $bookId);
         $sql->execute();
     }
-    // TESTED
+
     public function getAllBooksByUserId($id) {
         $sql = $this->conn->prepare("
             SELECT * FROM books WHERE user_id = ?");
@@ -352,27 +324,6 @@ class DB
         }
         return $books;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
